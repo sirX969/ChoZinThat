@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For ChoZinThat ❤️</title>
+<title>For ChoZinThat❤️</title>
 
 <style>
 *{
@@ -13,32 +13,6 @@
     font-family:'Segoe UI',sans-serif;
 }
 
-    /* Cute music button */
-#musicBtn{
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  padding: 14px 22px;
-  border: none;
-  border-radius: 50px;
-  background: linear-gradient(45deg, #ff4b8b, #ff6ec4);
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 8px 20px rgba(255, 75, 139, 0.45);
-  animation: pulse 1.5s infinite;
-  z-index: 9999;
-}
-
-#musicBtn:hover{
-  transform: scale(1.1);
-}
-
-@keyframes pulse{
-  0%{transform: scale(1);}
-  50%{transform: scale(1.1);}
-  100%{transform: scale(1);}
-}
 body{
     height:100vh;
     background:linear-gradient(180deg,#040b2f,#000);
@@ -129,12 +103,7 @@ p{
 @keyframes fadeIn{
     from{opacity:0;transform:translateY(20px);}
     to{opacity:1;transform:translateY(0);}
-} 
-    <button id="musicBtn">💖 Music</button>
-
-<audio id="bgMusic" loop>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
+}
 </style>
 </head>
 <body>
@@ -163,7 +132,6 @@ p{
 
         မောင် မမ ကို<br>
         သိပ်ချစ်တာဘဲ ❤️<br><br>
-
       Developer is MA" maung
     </p>
 </div>
@@ -195,18 +163,7 @@ function createFlowText(){
     setTimeout(()=>span.remove(),10000);
 }
 setInterval(createFlowText,300);
-   <script>
-const btn = document.getElementById("musicBtn");
-const music = document.getElementById("bgMusic");
-
-btn.addEventListener("click", () => {
-  music.play();
-  btn.innerHTML = "🎶 Playing";
-  btn.style.animation = "none";
-});
-</script> 
 </script>
 
 </body>
-
 </html>

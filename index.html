@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For ChoZinThat ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    background:linear-gradient(180deg,#040b2f,#000);
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+
+/* 🌧 Flowing Text Background */
+.flow-text{
+    position:absolute;
+    top:-10%;
+    left:0;
+    width:100%;
+    height:120%;
+    pointer-events:none;
+    z-index:0;
+}
+
+.flow-text span{
+    position:absolute;
+    top:-50px;
+    color:rgba(255,77,109,0.15);
+    font-size:24px;
+    animation:flow 8s linear infinite;
+    white-space:nowrap;
+}
+
+@keyframes flow{
+    0%{
+        transform:translateY(0);
+        opacity:0;
+    }
+    10%{opacity:1;}
+    100%{
+        transform:translateY(120vh);
+        opacity:0;
+    }
+}
+
+/* 💖 Main Content */
+.container{
+    text-align:center;
+    z-index:2;
+    padding:20px;
+    max-width:400px;
+}
+
+.photo{
+    width:220px;
+    height:220px;
+    border-radius:20px;
+    object-fit:cover;
+    box-shadow:0 0 25px rgba(255,77,109,0.6);
+    animation:fadeIn 2s ease-in-out;
+}
+
+h1{
+    margin-top:20px;
+    font-size:2.2rem;
+    color:#ff4d6d;
+    animation:fadeIn 2.5s ease-in-out;
+}
+
+p{
+    margin-top:15px;
+    font-size:1.1rem;
+    line-height:1.8;
+    animation:fadeIn 3s ease-in-out;
+}
+
+/* ❤️ Floating Hearts */
+.heart{
+    position:absolute;
+    bottom:-20px;
+    color:#ff4d6d;
+    animation:float 6s linear infinite;
+    opacity:0.8;
+}
+
+@keyframes float{
+    0%{transform:translateY(0) scale(1);}
+    100%{transform:translateY(-110vh) scale(1.6);opacity:0;}
+}
+
+@keyframes fadeIn{
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
+}
+</style>
+</head>
+<body>
+
+<!-- 🎵 Music -->
+<audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- 🌧 Background Flow Text -->
+<div class="flow-text" id="flowText"></div>
+
+<!-- 💖 Content -->
+<div class="container">
+    <img src="photo.jpg" class="photo" alt="ChoZinThat">
+
+    <h1>ChoZinThat ❤️</h1>
+
+    <p>
+        ဒီညရဲ့လေထုထဲမှာ<br>
+        မောင့်စိတ်ထဲက နာမည်တစ်ခုတည်းက<br>
+        မမ ပါ 🌙<br><br>
+
+        မမ ရဲ့အပြုံးလေးက<br>
+        မောင့်ဘ၀ရဲ့ အားဆေးတစ်ခွက်ပါ 💕<br><br>
+
+        မောင် မမ ကို<br>
+        သိပ်ချစ်တာဘဲ ❤️<br><br>
+
+      Developer is MA" maung
+    </p>
+</div>
+
+<script>
+/* ❤️ Hearts */
+function createHeart(){
+    const heart=document.createElement("div");
+    heart.className="heart";
+    heart.innerHTML="❤️";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=Math.random()*20+15+"px";
+    heart.style.animationDuration=Math.random()*3+4+"s";
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),7000);
+}
+setInterval(createHeart,350);
+
+/* 🌧 Flowing Name */
+const flow=document.getElementById("flowText");
+
+function createFlowText(){
+    const span=document.createElement("span");
+    span.innerText="ChoZinThat";
+    span.style.left=Math.random()*100+"vw";
+    span.style.fontSize=Math.random()*12+18+"px";
+    span.style.animationDuration=Math.random()*4+6+"s";
+    flow.appendChild(span);
+    setTimeout(()=>span.remove(),10000);
+}
+setInterval(createFlowText,300);
+</script>
+
+</body>
+</html>
